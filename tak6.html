@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+<style>
+    body{
+        background-image: url("bg.jpg");
+        width: 120pt;
+    }
+
+#input1{
+    font-size: 20px;
+}
+
+#btn{
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    color:red;
+    border: 100px
+}
+#text{
+    font-size: 80px;
+    color: white;
+    margin-top: 550px;
+    margin-left: 1050px;
+    font-style:italic;
+}    
+/* .rotate */
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-25deg);
+
+/* Firefox */
+-moz-transform: rotate(-25deg);
+
+/* IE */
+-ms-transform: rotate(-25deg);
+
+/* Opera */
+-o-transform: rotate(-50deg);
+
+float: left;
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+    <div id="main">
+
+    </div>
+</body>
+<script>
+// Text
+var div = document.getElementById("main");
+
+var input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("id", "input1");
+div.appendChild(input);
+// button
+var button = document.createElement("input");
+button.setAttribute("id", "btn");
+button.setAttribute("type","button");
+button.setAttribute("value", "Enter name and click me");
+button.setAttribute("onClick","func()");
+div.appendChild(button);
+// down writin Text
+var p = document.createElement("p");
+p.setAttribute("id", "text");
+p.setAttribute("class", "rotate");
+
+div.appendChild(p);
+
+function func(){
+    var result = document.getElementById("input1").value;
+    document.getElementById("text").innerHTML = result;
+    
+}
+
+
+
+
+
+
+</script>
+</html>
